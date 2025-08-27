@@ -185,6 +185,31 @@ footer .social  {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .menu-clases {
+    display: none;        
+    flex-direction: column;
+    background: #34495e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .menu-clases a {
+    padding: 10px;
+    display: block;
+  }
+
+  .menu- {
+    display: block; 
+  }
+
+  .menu-clases.activo {
+    display: flex; 
+  }
+}
 
 @media (max-width: 1024px) {
   .content {
