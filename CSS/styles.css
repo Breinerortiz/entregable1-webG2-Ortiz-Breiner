@@ -1,0 +1,236 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.portada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #2c3e50;
+  position: sticky;
+  top: 0;           /* se pega arriba */
+  z-index: 1000;    /* queda por encima del contenido */
+}
+
+/* Botón hamburguesa (solo móvil) */
+.menu- {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  display: none;    /* oculto en PC */
+}
+
+.menu-clases {
+  display: flex; 
+  gap: 20px;     
+}
+
+.menu-clases a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-clases a:hover {
+  color: #f0a500;
+}
+
+/* Logo */
+.portada .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.portada .logo .lo {
+  width: 50px;
+}
+
+/* Espacio al hacer scroll a secciones */
+section {
+  scroll-margin-top: 80px;
+}
+
+
+.presen {
+  
+  text-align: center; ;
+  padding: 50px ;
+  background: #696b6b;
+}
+
+.presen h1 {
+  font-size: 1em;
+}
+.uno{
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.presen .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 15px;
+  position: static;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.logos{
+  width: 30px;
+}
+
+/* Estilo general para escritorio */
+.content {
+  display: flex;
+  flex-direction: column; /* texto arriba, imagen debajo */
+  text-align: center;
+  background: #696b6b;
+  padding: 15px;
+  gap: 15px;
+}
+
+.content .text {
+  color: white;
+  text-align: justify;
+}
+
+.content .imagenes {
+  display: flex;
+  flex-direction: column; /* columna = una debajo de la otra */
+  gap: 10px; /* espacio entre imágenes */
+  justify-content: center;
+  align-items: center;
+}
+
+.content .imagenes img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+ 
+
+}
+
+ img { 
+  width: 200px;
+   border-radius: 10px; 
+    margin-top: 20px;
+  }
+
+.content p {
+  height: 100px;
+  width: 80%;
+  border: 1px solid #333;
+  padding: 10px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  background: #695d5d; /* opcional: fondo blanco para contraste */
+}
+
+
+
+footer {
+  background: #2c3e50;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social  {
+  margin: 0 10px;
+  color: rgb(255, 5, 5);
+  text-decoration: none;
+}
+
+
+
+@media (min-width: 768px) {
+ #B, #D {
+    flex-direction: row; /* texto izq - imagen der */
+  }
+
+  #C {
+    flex-direction: row-reverse; /* imagen izq - texto der */
+  }
+   .content .imagenes {
+    flex-direction: row; /* fila = una al lado de la otra */
+    gap: 20px;
+  }
+ .content .text {
+    font-size: 14px; /* letra más pequeña en tablet */
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+  .link {
+    flex: 1 1 45%;
+  }
+  .portada .menu {
+    display: none;
+  }
+  .menu- {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .text, 
+  .content .imagenes {
+    flex: 1 1 100%;
+  }
+}
+/* Celular */
+@media (min-width: 1024px) {
+   .portada {
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+ 
+  .menu- {
+    display: none; 
+  }
+  .menu-clases {
+    display: flex; 
+    gap: 20px;     
+  }
+ .menu-clases a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);                 
+    background-color: #6c757d;   
+    padding: 10px 18px;
+    border-radius: 8px;           
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+ 
+
+  .presen h1 {
+    font-size: 2.5em;
+  }
+
+}
+@media (min-width: 1025px) {
+  .content .imagenes img {
+    max-width: 200px; /* tamaño más grande */
+    height: auto;
+  }
+}
